@@ -171,6 +171,30 @@ section {
     }
 }
 
+.theme-btn-2 {
+    top: 15%;
+    right: 3%;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--color-gray-4);
+    cursor: pointer;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, .3);
+    transition: all .1s ease-in-out;
+    &:active {
+        transform: translateY(-3px);
+    }
+    em {
+        font-size: 1.4rem;
+        color: var(--color-gray-2);
+        pointer-events: none;
+    }
+}
+
 
 /*Header-content*/
 
