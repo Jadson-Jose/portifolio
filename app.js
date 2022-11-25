@@ -2,6 +2,14 @@ const sections = document.querySelectorAll('.section');
 const sctBtns = document.querySelectorAll('.controlls');
 const secBtn = document.querySelectorAll('.control');
 const allSections = document.querySelectorAll('.main-content');
+const flagsElement = document.getElementById('flags');
+
+const changeLanguage = async language=>{
+    const requestJson = await fetch(`./language/${language}.json`)
+    const texts = await requestJson.json()
+
+    console.log(texts)
+}
 
 function PageTransitions() {
 
@@ -41,6 +49,10 @@ const themeBtn = document.querySelector('.theme-btn');
 themeBtn.addEventListener('click', () => {
     let element = document.body;
     element.classList.toggle('light-mode')
+})
+
+flagsElement.addEventListener('click', (e) => {
+    changeLanguage(e.target.parentElement.dataset.language);
 })
 
 
