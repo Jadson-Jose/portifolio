@@ -965,6 +965,7 @@ section {
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
+  margin-right: 3rem;
 }
 
 .main-btn .btn-text {
